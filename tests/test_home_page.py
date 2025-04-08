@@ -41,7 +41,7 @@ class TestYaScooterHomePage:
         ya_scooter_home_page.click_cookies_accept()
         ya_scooter_home_page.click_yandex_scooter_button()
 
-        assert ya_scooter_home_page.current_url().rstrip('/') == Url.MAIN_PAGE
+        assert ya_scooter_home_page.current_url().rstrip('/') == Url.BASE_URL
 
     @allure.feature('Переход на страницу "ЯндексДзен" с Домашней страницы')
     @allure.story('Переход на страницу ЯндексДзен по кнопке лого в хедере')

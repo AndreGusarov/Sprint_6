@@ -2,7 +2,6 @@ import allure
 from pages.base_page import BasePage
 from data.locators import YaScooterOrderPageLocator as Locators
 import re
-from selenium.webdriver.support import expected_conditions as EC
 
 class YaScooterOrderPage(BasePage):
     @allure.step('Ввод имени')
@@ -42,8 +41,6 @@ class YaScooterOrderPage(BasePage):
     
     @allure.step('Выбор цвета')
     def choose_color(self, option):
-        #return self.find_elements(Locators.COLOR_CHECKBOXES)[option].click()
-    #def choose_color(self, options):
         if isinstance(option, list):
             for option in option:
                 self.find_elements(Locators.COLOR_CHECKBOXES)[option].click()
